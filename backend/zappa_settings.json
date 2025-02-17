@@ -1,0 +1,18 @@
+{
+    "dev": {
+        "app_function": "app.app",
+        "aws_region": "us-east-1",
+        "exclude": [
+            "boto3",
+            "dateutil",
+            "botocore",
+            "s3transfer",
+            "concurrent"
+        ],
+        "profile_name": "amplify-dev",
+        "project_name": "backend",
+        "runtime": "python3.9",
+        "s3_bucket": "zappa-2cwkn3uc1",
+        "cors": true
+    }
+}

@@ -3,8 +3,29 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
+import axios from "axios";
+
+// const apiUrl = "https://abcd1234.execute-api.us-east-1.amazonaws.com/dev"; // Replace with your API URL
+const apiUrl = import.meta.env.VITE_API_URL;
+
+
+
+
+
+
 function App() {
   const [count, setCount] = useState(0)
+
+  axios
+  .get(`${apiUrl}/`) // The URL is dynamic based on the environment variable
+  .then((response) => {
+    console.log("Response data:", response.data);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
 
   return (
     <>

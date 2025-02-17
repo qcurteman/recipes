@@ -1,0 +1,3 @@
+zappa
+Flask
+flask-cors
